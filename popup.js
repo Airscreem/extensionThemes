@@ -1,16 +1,18 @@
 (function() {
   var data = {
     listName: document.querySelectorAll('.list-name'),
-    tabsGeneralWidth: document.getElementsByClassName('b-themes-tabs-general')[0].offsetWidth,
-    tabsOther: document.getElementsByClassName('b-themes-tabs-other')[0],
 
-    widthGeneral: document.getElementsByClassName('b-themes-tabs-general')[0].offsetWidth,
-    widthOther: document.getElementsByClassName('b-themes-tabs-other')[0].offsetWidth,
+    tabsOther: document.getElementsByClassName('b-themes-tabs-other')[0],
+    tabsGeneral: document.getElementsByClassName('b-themes-tabs-general')[0],
+
+    widthTabsGeneral: document.getElementsByClassName('b-themes-tabs-general')[0].offsetWidth,
+    widthTabsOther: document.getElementsByClassName('b-themes-tabs-other')[0].offsetWidth,
+    
     arrowRight: document.getElementsByClassName('right-button')[0],
     arrowLeft:document.getElementsByClassName('left-button')[0]
   }
 
-  data.tabsOther.style.left = data.tabsGeneralWidth + 'px';
+  data.tabsOther.style.left = data.widthGeneral + 'px';
 
   resizeBlock();
 
@@ -46,7 +48,7 @@
         arrowRight = data.arrowRight,
         arrowLeft = data.arrowLeft;
 
-    self.widthTogether = data.widthGeneral + data.widthOther;
+    self.widthTogether = data.widthTabsGeneral + data.widthTabsOther;
 
     self.visible = visible;
     self.hidden = hidden;
