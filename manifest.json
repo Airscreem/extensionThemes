@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "Extenstion Yandex themes",
+  "description": "This extension have slider with our themes",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon-default.png",
+    "default_popup": "popup.html",
+    "default_title": "Orb Themes"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*:///*" ],
+      "js": [ "content.js" ]
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "http://newth.orbitum.com/"
+  ]
+}

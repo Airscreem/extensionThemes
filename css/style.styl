@@ -1,0 +1,160 @@
+@import 'mix/mix.styl'
+@import 'reset.styl'
+
+*
+  box-sizing border-box
+
+html, body
+  width 100%
+  height 100%
+  background #fff
+  color #fff
+
+$bgMain = #333332;
+$colorMain = #fff;
+
+$colorTabsHover = #fc0;
+$colorTabsActive = #fc0;
+$borderTabs = 3px solid #fc0;
+
+$btnDefaultBg = #333332;
+$btnDefaultBgHover = #3d3d3c;
+$btnYellowBg = #ffdb4d;
+$btnYellowBgHover = #ffd633;
+  
+.b-themes-catalog
+  font-size 13px
+  font-family 'Roboto', sans-serif
+  width 100%
+  min-width 980px
+  position fixed
+  z-index 9999
+  bottom 0
+  color $colorMain
+  background $bgMain
+  user-select none
+  height 185px
+  
+.b-themes-head
+  position relative
+  height 39px
+  border-bottom 1px solid #484847
+  
+  .b-themes-left
+    position absolute
+    left 0
+    height 38px
+    overflow hidden
+  
+    .b-themes-tabs-general,
+    .b-themes-tabs-other
+      padding-left 12px
+      display inline-block
+      position absolute
+      
+      ul
+        white-space nowrap
+        word-wrap normal
+    
+    .list-name
+      display inline-block
+      cursor pointer
+      transition color .15s ease-out
+      height 40px
+      line-height 37px
+      font-size: 14px;
+      margin: 0 8px;
+      
+      &.active
+        color $colorTabsActive
+        border-bottom $borderTabs
+        height 38px
+      
+      &:hover
+        color $colorTabsHover
+    
+  .b-themes-right
+    position absolute
+    right 0
+    height 38px
+    overflow hidden
+    font-size 0
+    width 402px
+    white-space nowrap
+  
+  .btn
+    display inline-block
+    padding: 0 25px
+    text-align center
+    transition background .15s ease-out
+    text-decoration none
+    height 100%
+    line-height 38px
+    font-size 14px
+    
+  .btn-default
+    color #fff
+    border-left 1px solid #484847
+    background $btnDefaultBg
+    &:hover
+      background $btnDefaultBgHover
+  
+  .btn-yellow
+    background $btnYellowBg
+    color #000
+    &:hover
+      background $btnYellowBgHover
+      
+  .b-themes-arrow
+    bottom 0
+    height 37px
+    width 31px
+    cursor pointer
+    background-color rgba(0,0,0,.5)
+    visibility visible
+    position absolute
+    z-index 100
+    display none
+    
+    &.left-button
+      left 0
+    &.right-button
+      right 0
+      
+.b-themes-body
+  width 100%
+  display block
+  height 154px
+  margin-bottom -20px
+  padding-top 12px
+  overflow-y hidden
+  white-space nowrap
+  word-wrap normal
+  
+  .b-theme
+    padding-left 15px
+    .theme
+      text-align center
+      display inline-block
+      width 150px
+      margin 0 5px
+      a
+        text-decoration none
+        display block
+        img
+          width 150px
+          height 100px
+          -webkit-filter grayscale(50%)
+          filter grayscale(50%)
+          transition all .5s ease-out
+        span
+          color #7d7d7c
+          font-size 13px
+          transition all .5s ease-out
+          display block
+          
+    .theme:hover span
+      color #fff
+    .theme:hover img
+      -webkit-filter grayscale(0)
+      filter grayscale(0)
