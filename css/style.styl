@@ -39,18 +39,28 @@ $btnYellowBgHover = #ffd633;
   position relative
   height 39px
   border-bottom 1px solid #484847
+  overflow hidden
   
   .b-themes-left
     position absolute
     left 0
     height 38px
-    overflow hidden
+
+    .b-themes-inside
+      overflow-x scroll
+      height 55px
+      overflow-y hidden
+      white-space nowrap
+      position relative
   
     .b-themes-tabs-general,
     .b-themes-tabs-other
       padding-left 12px
       display inline-block
       position absolute
+    
+    .b-themes-tabs-other
+      padding-right 10px
       
       ul
         white-space nowrap
